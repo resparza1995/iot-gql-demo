@@ -1,0 +1,31 @@
+schema {
+ 	query: Query
+ 	mutation: Mutation
+}
+
+type Query {
+	allFilms: [Film]
+	film(id: Int): Film
+}
+
+type Mutation {
+	createFilm(film: FilmDto): Film
+	updateFilm(id: Int, film: FilmDto): Film
+	deleteFilm(id: Int): Boolean
+}
+
+type Film {
+ 	id: Int
+ 	title: String
+ 	description: String
+ 	releaseYear: Int
+ 	stock: Int
+}
+
+input FilmDto {
+	id: Int
+ 	title: String
+ 	description: String
+ 	releaseYear: Int
+ 	stock: Int
+}
