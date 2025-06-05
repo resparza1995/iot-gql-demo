@@ -23,8 +23,8 @@ import graphql.schema.idl.TypeDefinitionRegistry;
 @Service
 public class GraphQLService {
 
-	@Autowired
-	FilmService filmService;
+    @Autowired
+    FilmService filmService;
 	
     @Autowired
     FilmRepository filmRepository;
